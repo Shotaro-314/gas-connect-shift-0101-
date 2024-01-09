@@ -8,6 +8,9 @@
     "macros": [{
       "menuName": "copy_and_sync",
       "functionName": "copy_and_sync"
+    }, {
+      "menuName": "shift-calc-hide",
+      "functionName": "myFunction"
     }]
   }
 }

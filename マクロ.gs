@@ -2,10 +2,15 @@ function copy_and_sync() {
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.setActiveSheet(spreadsheet.getSheetByName('シフト修正'), true);
   
+  //すべてコピー(値のみ)
   spreadsheet.getRange('A10').activate();
   spreadsheet.getRange('\'シフト作成\'!A10:CF109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
+
+  //算出列のコピー元生成(関数のコピー)
   spreadsheet.getRange('E111').activate();
   spreadsheet.getRange('\'シフト作成\'!E10:CF10').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+
+  //算出列のコピー
   spreadsheet.getRange('H10').activate();
   spreadsheet.getRange('H111:I111').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
   spreadsheet.getRange('M10').activate();
@@ -39,6 +44,7 @@ function copy_and_sync() {
   spreadsheet.getRange('CE10').activate();
   spreadsheet.getRange('CE111:CF111').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
 
+  // 値のみコピーした不要なデータを削除
   spreadsheet.getRange('H11:I109').activate();
   spreadsheet.getActiveRangeList().clear({contentsOnly: true, skipFilteredRows: true});
   spreadsheet.getRange('M11:N109').activate();
@@ -72,8 +78,11 @@ function copy_and_sync() {
   spreadsheet.getRange('CE11:CF109').activate();
   spreadsheet.getActiveRangeList().clear({contentsOnly: true, skipFilteredRows: true});
   
+  //日付同期
   spreadsheet.getRange('A2').activate();
   spreadsheet.getRange('\'シフト作成\'!2:2').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
+
+  // 人員配置予定をコピー
   spreadsheet.getRange('E4').activate();
   spreadsheet.getRange('\'シフト作成\'!E4:E5').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
   spreadsheet.getRange('J4').activate();
@@ -106,4 +115,73 @@ function copy_and_sync() {
   spreadsheet.getRange('\'シフト作成\'!BW4:BW5').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
   spreadsheet.getRange('CB4').activate();
   spreadsheet.getRange('\'シフト作成\'!CB4:CB5').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+};
+
+
+function myFunction() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getRange('H:I').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('H2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('J:J').activate();
+  spreadsheet.getRange('M:N').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('M2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('O:O').activate();
+  spreadsheet.getRange('R:S').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('R2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('T:T').activate();
+  spreadsheet.getRange('W:X').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('W2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('Y:Y').activate();
+  spreadsheet.getRange('AB:AC').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('AB2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('AD:AD').activate();
+  spreadsheet.getRange('AG:AH').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('AG2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('AI:AI').activate();
+  spreadsheet.getRange('AL:AM').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('AL2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('AN:AN').activate();
+  spreadsheet.getRange('AQ:AR').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('AQ2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('AS:AS').activate();
+  spreadsheet.getRange('AV:AW').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('AV2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('AX:AX').activate();
+  spreadsheet.getRange('BA:BB').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('BA2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('BC:BC').activate();
+  spreadsheet.getRange('BF:BG').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('BF2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('BH:BH').activate();
+  spreadsheet.getRange('BK:BL').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('BK2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('BM:BM').activate();
+  spreadsheet.getRange('BP:BQ').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('BP2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('BR:BR').activate();
+  spreadsheet.getRange('BU:BV').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('BU2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('BW:BW').activate();
+  spreadsheet.getRange('BZ:CA').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('BZ2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('CB:CB').activate();
+  spreadsheet.getRange('CE:CF').activate();
+  spreadsheet.setCurrentCell(spreadsheet.getRange('CE2'));
+  spreadsheet.getActiveSheet().hideColumns(spreadsheet.getActiveRange().getColumn(), spreadsheet.getActiveRange().getNumColumns());
+  spreadsheet.getRange('CG:CG').activate();
 };
