@@ -115,6 +115,40 @@ function copy_and_sync() {
   spreadsheet.getRange('\'シフト作成\'!BW4:BW5').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
   spreadsheet.getRange('CB4').activate();
   spreadsheet.getRange('\'シフト作成\'!CB4:CB5').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+
+  //人員配置算出欄のコピー
+  spreadsheet.getRange('I10').activate();
+  spreadsheet.getRange('\'シフト作成\'!I10:I109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('N10').activate();
+  spreadsheet.getRange('\'シフト作成\'!N10:N109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('S10').activate();
+  spreadsheet.getRange('\'シフト作成\'!S10:S109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('X10').activate();
+  spreadsheet.getRange('\'シフト作成\'!X10:X109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('AC10').activate();
+  spreadsheet.getRange('\'シフト作成\'!AC10:AC109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('AH10').activate();
+  spreadsheet.getRange('\'シフト作成\'!AH10:AH109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('AM10').activate();
+  spreadsheet.getRange('\'シフト作成\'!AM10:AM109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('AR10').activate();
+  spreadsheet.getRange('\'シフト作成\'!AR10:AR109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('AW10').activate();
+  spreadsheet.getRange('\'シフト作成\'!AW10:AW109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('BB10').activate();
+  spreadsheet.getRange('\'シフト作成\'!BB10:BB109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('BG10').activate();
+  spreadsheet.getRange('\'シフト作成\'!BG10:BG109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('BL10').activate();
+  spreadsheet.getRange('\'シフト作成\'!BL10:BL109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('BQ10').activate();
+  spreadsheet.getRange('\'シフト作成\'!BQ10:BQ109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('BV10').activate();
+  spreadsheet.getRange('\'シフト作成\'!BV10:BV109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('CA10').activate();
+  spreadsheet.getRange('\'シフト作成\'!CA10:CA109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+  spreadsheet.getRange('CF10').activate();
+  spreadsheet.getRange('\'シフト作成\'!CF10:CF109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
 };
 
 
@@ -190,51 +224,37 @@ function draft() {
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.setActiveSheet(spreadsheet.getSheetByName('シフト修正'), true);
 
+  //人員配置算出欄のコピー
   spreadsheet.getRange('I10').activate();
   spreadsheet.getRange('\'シフト作成\'!I10:I109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('N10').activate();
   spreadsheet.getRange('\'シフト作成\'!N10:N109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('S10').activate();
   spreadsheet.getRange('\'シフト作成\'!S10:S109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('X10').activate();
   spreadsheet.getRange('\'シフト作成\'!X10:X109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('AC10').activate();
   spreadsheet.getRange('\'シフト作成\'!AC10:AC109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('AH10').activate();
   spreadsheet.getRange('\'シフト作成\'!AH10:AH109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('AM10').activate();
   spreadsheet.getRange('\'シフト作成\'!AM10:AM109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('AR10').activate();
   spreadsheet.getRange('\'シフト作成\'!AR10:AR109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('AW10').activate();
   spreadsheet.getRange('\'シフト作成\'!AW10:AW109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('BB10').activate();
   spreadsheet.getRange('\'シフト作成\'!BB10:BB109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('BG10').activate();
   spreadsheet.getRange('\'シフト作成\'!BG10:BG109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('BL10').activate();
   spreadsheet.getRange('\'シフト作成\'!BL10:BL109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('BQ10').activate();
   spreadsheet.getRange('\'シフト作成\'!BQ10:BQ109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('BV10').activate();
   spreadsheet.getRange('\'シフト作成\'!BV10:BV109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('CA10').activate();
   spreadsheet.getRange('\'シフト作成\'!CA10:CA109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-
   spreadsheet.getRange('CF10').activate();
   spreadsheet.getRange('\'シフト作成\'!CF10:CF109').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
 };
