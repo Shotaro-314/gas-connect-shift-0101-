@@ -10,6 +10,7 @@ function onOpen() {
       ui.createMenu("開発用")
       .addItem("copy_and_sync", "copy_and_sync")
       .addItem("calc-hide","calc_col_hide")
+      .addItem("draft","draft")
   );
   //menu.addItem('hide',ms_sheet_hide);
   //menu.addItem('unhide',ms_sheet_unhide);
