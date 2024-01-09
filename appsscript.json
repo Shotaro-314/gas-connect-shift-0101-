@@ -11,6 +11,9 @@
     }, {
       "menuName": "shift-calc-hide",
       "functionName": "myFunction"
+    }, {
+      "menuName": "band-chk-copy",
+      "functionName": "myFunction"
     }]
   }
 }
