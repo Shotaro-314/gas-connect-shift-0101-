@@ -24,11 +24,11 @@ function master_sync(){
   if("氏名" == sheet.getRange("A2").getValue()){
     name_array = sheet.getRange(name_first_row,name_col, last_row).getValues();
   }
-  //debugger
 
-  //sheet.getRange("EE2:EE"&last_row+1).setValues(name_array);
-
-  //debugger
+  //配列の長さを取得、行の調整(+1)
+  let namearray_length = 1;
+  namearray_length = name_array.length　+ 1;
+  
 
   // Googleフォームのプルダウン内の値を上書きする処理
   let form = FormApp.openById(form_id);
@@ -37,7 +37,7 @@ function master_sync(){
   let items = form.getItems(FormApp.ItemType.LIST);
 
   items.forEach(function(item){
-    // 質問項目が「氏名」を含むものに対して、スプレッドシートの内容を反映する
+    // 質問項目が氏名を含むものに対して、内容を反映する
     if(item.getTitle().match(/氏名.*$/)){
       let listItemQuestion = item.asListItem();
       let choices = [];
@@ -47,13 +47,14 @@ function master_sync(){
           choices.push(listItemQuestion.createChoice(name));
         }
       });
-      // プルダウンの選択肢を上書きする
+      // プルダウンの選択肢を上書き
       listItemQuestion.setChoices(choices);
     }
   });
   //footprint
 
-  sheet.getRange("AP5").setValue(now_time);
+  sheet.getRange("AP5").setValue(now_time); //同期時間
+  sheet.getRange('EE2:EE'+namearray_length).setValues(name_array);  //最終同期配列の格納
 
 }
 
