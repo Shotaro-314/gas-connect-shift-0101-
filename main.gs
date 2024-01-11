@@ -27,7 +27,7 @@ function master_sync(){
 
   //配列の長さを取得、行の調整(+1)
   let namearray_length = 1;
-  namearray_length = name_array.length　+ 1;
+  namearray_length = name_array.length　+ 2;
   
 
   // Googleフォームのプルダウン内の値を上書きする処理
@@ -54,7 +54,7 @@ function master_sync(){
   //footprint
 
   sheet.getRange("AP5").setValue(now_time); //同期時間
-  sheet.getRange('EE2:EE'+namearray_length).setValues(name_array);  //最終同期配列の格納
+  sheet.getRange('EE3:EE'+namearray_length).setValues(name_array);  //最終同期配列の格納
 
 }
 
