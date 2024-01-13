@@ -4,7 +4,7 @@ function pdf_export(){
   let sh_id = ss.getSheetByName("確定シフト").getSheetId();
 
   let sheet = ss.getSheetByName('ManagementSheet');
-  let target_name = sheet.getRange("S4").getValue();
+  let target_name = sheet.getRange("AP8").getValue();
 
   let file_name = ""+target_name+""+now_time+"";
   createPdf(drive_id, ss_id, sh_id, file_name);
@@ -52,6 +52,9 @@ function master_sync(){
     }
   });
   //footprint
+
+  sheet.getRange('EE3:EE102').activate();
+  sheet.getActiveRangeList().clear({contentsOnly: true, skipFilteredRows: true}); //最終同期配列の格納庫を確保
 
   sheet.getRange("AP5").setValue(now_time); //同期時間
   sheet.getRange('EE3:EE'+namearray_length).setValues(name_array);  //最終同期配列の格納
